@@ -1,0 +1,8 @@
+export  class Address model Address {
+  id        Int      @default(autoincrement()) @id
+  street    String
+  city      String
+  country   String
+  user       User   @relation(fields:[userId],references:[id])
+  userId     Int
+ }
